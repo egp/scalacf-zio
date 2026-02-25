@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "suite": "gosper-101b",
+  "vectors": [
+    {
+      "id": "101b-add-3_2-plus-7_3",
+      "kind": "binary",
+      "op": "add",
+      "x": { "source": "rational", "n": "3", "d": "2" },
+      "y": { "source": "rational", "n": "7", "d": "3" },
+      "expect": { "termsPrefix": ["3", "1", "5"], "takeTerms": 3 },
+      "limits": { "maxOutputTerms": 3, "maxSteps": 50000, "maxPulls": { "x": 100, "y": 100 } }
+    },
+    {
+      "id": "101b-sub-5_3-minus-2_5",
+      "kind": "binary",
+      "op": "sub",
+      "x": { "source": "rational", "n": "5", "d": "3" },
+      "y": { "source": "rational", "n": "2", "d": "5" },
+      "expect": { "termsPrefix": ["1", "3", "1", "3"], "takeTerms": 4 },
+      "limits": { "maxOutputTerms": 4, "maxSteps": 50000, "maxPulls": { "x": 100, "y": 100 } }
+    },
+    {
+      "id": "101b-mul-4_3-times-9_5",
+      "kind": "binary",
+      "op": "mul",
+      "x": { "source": "rational", "n": "4", "d": "3" },
+      "y": { "source": "rational", "n": "9", "d": "5" },
+      "expect": { "termsPrefix": ["2", "2", "2"], "takeTerms": 3 },
+      "limits": { "maxOutputTerms": 3, "maxSteps": 50000, "maxPulls": { "x": 100, "y": 100 } }
+    },
+    {
+      "id": "101b-div-7_4-div-3_2",
+      "kind": "binary",
+      "op": "div",
+      "x": { "source": "rational", "n": "7", "d": "4" },
+      "y": { "source": "rational", "n": "3", "d": "2" },
+      "expect": { "termsPrefix": ["1", "6"], "takeTerms": 2 },
+      "limits": { "maxOutputTerms": 2, "maxSteps": 50000, "maxPulls": { "x": 100, "y": 100 } }
+    },
+    {
+      "id": "101b-add-sqrt2-plus-1",
+      "kind": "binary",
+      "op": "add",
+      "x": { "source": "calculated", "name": "sqrt2" },
+      "y": { "source": "rational", "n": "1", "d": "1" },
+      "expect": { "termsPrefix": ["2", "2", "2", "2", "2", "2"], "takeTerms": 6 },
+      "limits": { "maxOutputTerms": 6, "maxSteps": 2000, "maxPulls": { "x": 50000, "y": 50 } }
+    }
+  ]
+}

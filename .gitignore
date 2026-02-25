@@ -1,0 +1,43 @@
+# ===== Scala / sbt =====
+target/
+project/target/
+project/project/target/
+
+# sbt / bloop / metals
+.bloop/
+.metals/
+.bsp/
+.sbt/
+.sbtserver/
+.scalafmt.conf.bak
+
+# Scala IDE / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# VS Code
+.vscode/
+
+# ===== OS / editor noise =====
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ===== Test / coverage / reports =====
+coverage/
+coverage-report/
+scalac-coverage-runtime/
+test-reports/
+junit.xml
+
+# ===== Logs =====
+*.log
+
+# ===== Local env files (optional) =====
+.env
+.env.*

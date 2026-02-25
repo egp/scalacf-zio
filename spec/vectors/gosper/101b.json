@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "suite": "gosper-101b-min",
+  "vectors": [
+    {
+      "id": "101b-add-sqrt2-plus-1",
+      "kind": "binary",
+      "op": "add",
+      "x": { "source": "calculated", "name": "sqrt2" },
+      "y": { "source": "rational", "n": "1", "d": "1" },
+      "expect": { "termsPrefix": ["2", "2", "2", "2", "2", "2"], "takeTerms": 6 },
+      "limits": {
+        "maxOutputTerms": 6,
+        "maxSteps": 200,
+        "maxPulls": { "x": 50000, "y": 50 }
+      }
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "suite": "core-basics",
+  "vectors": [
+    {
+      "id": "bin-add-1_2-plus-1_3",
+      "kind": "binary",
+      "op": "add",
+      "x": { "source": "rational", "n": "1", "d": "2" },
+      "y": { "source": "rational", "n": "1", "d": "3" },
+      "expect": { "termsPrefix": ["0", "1", "5"], "takeTerms": 3 },
+      "limits": { "maxOutputTerms": 3, "maxSteps": 50000, "maxPulls": { "x": 2000, "y": 2000 } }
+    },
+    {
+      "id": "bin-sub-1_2-minus-1_3",
+      "kind": "binary",
+      "op": "sub",
+      "x": { "source": "rational", "n": "1", "d": "2" },
+      "y": { "source": "rational", "n": "1", "d": "3" },
+      "expect": { "termsPrefix": ["0", "6"], "takeTerms": 2 },
+      "limits": { "maxOutputTerms": 2, "maxSteps": 50000, "maxPulls": { "x": 2000, "y": 2000 } }
+    },
+    {
+      "id": "bin-mul-1_2-times-2_3",
+      "kind": "binary",
+      "op": "mul",
+      "x": { "source": "rational", "n": "1", "d": "2" },
+      "y": { "source": "rational", "n": "2", "d": "3" },
+      "expect": { "termsPrefix": ["0", "3"], "takeTerms": 2 },
+      "limits": { "maxOutputTerms": 2, "maxSteps": 50000, "maxPulls": { "x": 2000, "y": 2000 } }
+    },
+    {
+      "id": "bin-div-1_2-div-2_3",
+      "kind": "binary",
+      "op": "div",
+      "x": { "source": "rational", "n": "1", "d": "2" },
+      "y": { "source": "rational", "n": "2", "d": "3" },
+      "expect": { "termsPrefix": ["0", "1", "3"], "takeTerms": 3 },
+      "limits": { "maxOutputTerms": 3, "maxSteps": 50000, "maxPulls": { "x": 2000, "y": 2000 } }
+    },
+    {
+      "id": "bin-add-415_93-plus-0",
+      "kind": "binary",
+      "op": "add",
+      "x": { "source": "rational", "n": "415", "d": "93" },
+      "y": { "source": "rational", "n": "0", "d": "1" },
+      "expect": { "termsPrefix": ["4", "2", "6", "7"], "takeTerms": 4 },
+      "limits": { "maxOutputTerms": 4, "maxSteps": 50000, "maxPulls": { "x": 10000, "y": 2000 } }
+    },
+
+    {
+      "id": "un-ulft-id-sqrt2-prefix",
+      "kind": "unary",
+      "op": "ulft",
+      "transform": { "a": "1/1", "b": "0/1", "c": "0/1", "d": "1/1" },
+      "x": { "kind": "calculated", "name": "sqrt2" },
+      "expect": { "termsPrefix": ["1", "2", "2", "2", "2", "2"], "takeTerms": 6 },
+      "limits": { "maxOutputTerms": 6, "maxSteps": 20000, "maxPulls": { "x": 50000 } }
+    },
+    {
+      "id": "un-ulft-id-phi-prefix",
+      "kind": "unary",
+      "op": "ulft",
+      "transform": { "a": "1/1", "b": "0/1", "c": "0/1", "d": "1/1" },
+      "x": { "source": "calculated", "name": "phi" },
+      "expect": { "termsPrefix": ["1", "1", "1", "1", "1", "1"], "takeTerms": 6 },
+      "limits": { "maxOutputTerms": 6, "maxSteps": 20000, "maxPulls": { "x": 50000 } }
+    },
+    {
+      "id": "un-ulft-id-e-prefix",
+      "kind": "unary",
+      "op": "ulft",
+      "transform": { "a": "1/1", "b": "0/1", "c": "0/1", "d": "1/1" },
+      "x": { "source": "calculated", "name": "e" },
+      "expect": { "termsPrefix": ["2", "1", "2", "1", "1", "4", "1", "1"], "takeTerms": 8 },
+      "limits": { "maxOutputTerms": 8, "maxSteps": 40000, "maxPulls": { "x": 5000 } }
+    }
+  ]
+}
